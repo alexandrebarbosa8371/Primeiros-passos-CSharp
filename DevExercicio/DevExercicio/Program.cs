@@ -19,6 +19,20 @@ namespace DevExercicio {
             };
             Console.WriteLine();
             Console.WriteLine(resultado);
+            Console.WriteLine();
+
+            object obj = "Texto";
+
+            string tipo = obj switch
+            {
+                int i when i > 0 => $"Inteiro positivo: {i}",
+                int i => $"Inteiro: {i}",
+                string s => $"String: {s}",
+                bool b => $"Booleano: {b}",
+                null => "Nulo",
+                _ => "Tipo desconhecido"
+            };
+            Console.WriteLine(tipo);
         }
     }
 }
